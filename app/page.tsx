@@ -124,17 +124,21 @@ export default function HomePage() {
 
             {/* Mobile-Optimized Quick Stats */}
             <div className="grid grid-cols-3 gap-4 sm:gap-8 max-w-sm sm:max-w-md mx-auto">
-              {[
-                { icon: Award, label: "Award Winning", value: "25+" },
-                { icon: Clock, label: "Years Experience", value: "15+" },
-                { icon: Heart, label: "Happy Customers", value: "10K+" },
-              ].map((stat, index) => (
-                <div key={stat.label} className="text-center">
-                  <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 text-pink-600" />
-                  <div className="text-xl sm:text-2xl font-bold text-amber-800">{stat.value}</div>
-                  <div className="text-xs sm:text-sm text-amber-600">{stat.label}</div>
-                </div>
-              ))}
+              <div className="text-center">
+                <Award className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 text-pink-600" />
+                <div className="text-xl sm:text-2xl font-bold text-amber-800">25+</div>
+                <div className="text-xs sm:text-sm text-amber-600">Award Winning</div>
+              </div>
+              <div className="text-center">
+                <Clock className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 text-pink-600" />
+                <div className="text-xl sm:text-2xl font-bold text-amber-800">15+</div>
+                <div className="text-xs sm:text-sm text-amber-600">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <Heart className="h-6 w-6 sm:h-8 sm:w-8 mx-auto mb-2 text-pink-600" />
+                <div className="text-xl sm:text-2xl font-bold text-amber-800">10K+</div>
+                <div className="text-xs sm:text-sm text-amber-600">Happy Customers</div>
+              </div>
             </div>
           </div>
         </div>
