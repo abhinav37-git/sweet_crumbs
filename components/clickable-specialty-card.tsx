@@ -3,17 +3,26 @@
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { motion } from "framer-motion"
-import type { LucideIcon } from "lucide-react"
+import { Cake, Cookie, Heart, Star } from "lucide-react"
 
 interface ClickableSpecialtyCardProps {
   name: string
-  icon: LucideIcon
+  iconName: "cake" | "star" | "cookie" | "heart"
   description: string
   gradient: string
   href: string
 }
 
-export function ClickableSpecialtyCard({ name, icon: Icon, description, gradient, href }: ClickableSpecialtyCardProps) {
+const iconMap = {
+  cake: Cake,
+  star: Star,
+  cookie: Cookie,
+  heart: Heart,
+}
+
+export function ClickableSpecialtyCard({ name, iconName, description, gradient, href }: ClickableSpecialtyCardProps) {
+  const Icon = iconMap[iconName]
+
   return (
     <Link href={href} className="group block">
       <motion.div whileHover={{ y: -5, scale: 1.02 }} whileTap={{ scale: 0.98 }} transition={{ duration: 0.2 }}>

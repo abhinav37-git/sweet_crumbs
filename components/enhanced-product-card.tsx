@@ -10,7 +10,7 @@ import { Palette, Plus, Heart, Star } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { useState } from "react"
-
+import { formatPrice } from "@/lib/types"
 
 interface EnhancedProductCardProps {
   product: Product
@@ -20,10 +20,6 @@ interface EnhancedProductCardProps {
 export function EnhancedProductCard({ product, index = 0 }: EnhancedProductCardProps) {
   const { addToCart } = useStore()
   const [isLiked, setIsLiked] = useState(false)
-
-  const formatPrice = (price: number): string => {
-    return `₹${price.toFixed(2)}`
-  }
 
   const handleAddToCart = () => {
     addToCart({

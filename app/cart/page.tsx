@@ -9,14 +9,10 @@ import { EmergencyBanner } from "@/components/emergency-banner"
 import { DeliveryOptions } from "@/components/delivery-options"
 import Image from "next/image"
 import { Minus, Plus, Trash2 } from "lucide-react"
-
+import { formatPrice } from "@/lib/types"
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity } = useStore()
-  
-  const formatPrice = (price: number): string => {
-    return `₹${price.toFixed(2)}`
-  }
 
   const subtotal = cart.reduce((sum, item) => sum + item.product.price * item.quantity, 0)
   const tax = subtotal * 0.08

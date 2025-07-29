@@ -9,7 +9,7 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { FloatingElements } from "@/components/floating-elements"
 import { ClickableSpecialtyCard } from "@/components/clickable-specialty-card"
 import type { Product } from "@/lib/types"
-import { Cake, Cookie, Heart, Star, ChefHat, Clock, Award, Sparkles } from "lucide-react"
+import { Cake, Heart, ChefHat, Clock, Award, Sparkles } from "lucide-react"
 
 const featuredProducts: Product[] = [
   {
@@ -205,28 +205,28 @@ export default function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
             <ClickableSpecialtyCard
               name="Custom Cakes"
-              icon={Cake}
+              iconName="cake"
               description="Personalized for your special moments"
               gradient="from-pink-400 to-pink-600"
               href="/customize"
             />
             <ClickableSpecialtyCard
               name="Fresh Pastries"
-              icon={Star}
+              iconName="star"
               description="Daily selections of artisan pastries"
               gradient="from-amber-400 to-amber-600"
               href="/products?category=pastries"
             />
             <ClickableSpecialtyCard
               name="Gourmet Cookies"
-              icon={Cookie}
+              iconName="cookie"
               description="Classic and seasonal flavors"
               gradient="from-yellow-400 to-yellow-600"
               href="/products?category=cookies"
             />
             <ClickableSpecialtyCard
               name="Special Orders"
-              icon={Heart}
+              iconName="heart"
               description="Made just for you with love"
               gradient="from-red-400 to-red-600"
               href="/customize"
